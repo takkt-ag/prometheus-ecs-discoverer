@@ -189,9 +189,16 @@ class PrometheusEcsDiscoverer:
             task=task_arn,
         )
 
+        container_definition = None
         for defi in data.task_definition["containerDefinitions"]:
             if container_name == defi["name"]:
                 container_definition = defi
+                break
+
+        if container_definition is None:
+            _logger.warning(f"No container definition found for container {container_name}.")
+            self.targets_marked_rejected_counter += 1
+            return
 
         if _is_marked_as_target(container_definition):
             self.targets_marked_counter += 1

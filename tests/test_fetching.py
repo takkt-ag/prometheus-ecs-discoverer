@@ -213,9 +213,9 @@ def test_get_task_arns_with_run_task(fetcher, ecs, ec2):
 
     assert len(response_ec2["tasks"]) == 2
 
-    # Currently moto does not support launch type.
-    assert "EC2" != response_ec2["tasks"][0].get("launchType", None)
-    assert "EC2" != response_ec2["tasks"][1].get("launchType", None)
+    # Moto 4.x now supports launch type.
+    assert "EC2" == response_ec2["tasks"][0].get("launchType", None)
+    assert "EC2" == response_ec2["tasks"][1].get("launchType", None)
 
     task_arns = fetcher.get_task_arns(cluster_arn=cluster_arn)
     assert len(task_arns) == 3

@@ -1,9 +1,13 @@
-FROM bitnami/python:3.8-prod
+FROM bitnami/python:latest
 
 LABEL MAINTAINER="tim.and.trallnag+code@gmail.com"
 
 ARG PYPI_VERSION
 
-RUN until pip install --no-cache-dir "prometheus_ecs_discoverer==${PYPI_VERSION}"; do sleep 15; done
+COPY . /app
+WORKDIR /app
 
-CMD [ "python", "-m", "prometheus_ecs_discoverer.run" ]
+RUN python -m pip install poetry;\
+    poetry install --only main
+
+CMD [ "poetry", "run", "python", "-m", "prometheus_ecs_discoverer.run" ]
