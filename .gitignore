@@ -134,3 +134,5 @@ dmypy.json
 .history/
 # Ignore dynaconf secret files
 .secrets.*
+
+.*-cache/
