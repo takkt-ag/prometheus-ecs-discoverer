@@ -50,7 +50,14 @@ pipeline {
                             steps {
                                 sh '''
                                     rm -rf */node_modules/ ||:
-                                    yamllint --exclude '.github/**' $PWD
+                                    find . \
+                                        -not -path './.git/*' \
+                                        -not -path './.github/*' \
+                                        -not -path './*/node_modules/*' \
+                                        \\( -name '*.yaml' -o -name '*.yml' \\) \
+                                        -type f \
+                                        -print0 \
+                                    | xargs -0 -r yamllint
                                 '''
                             }
                         }
@@ -100,12 +107,18 @@ pipeline {
                 }
             }
 
+            environment {
+                POETRY_VIRTUALENVS_IN_PROJECT = 'true'
+                POETRY_VIRTUALENVS_PATH = "${env.WORKSPACE}/.venv"
+                PIP_CONFIG_FILE = "${env.WORKSPACE}/pip.conf"
+            }
+
             stages {
                 stage('Prepare') {
                     steps {
                         sh '''
                         python -m pip install poetry
-                        poetry install --with dev
+                        poetry install
                         '''
                     }
                 }
