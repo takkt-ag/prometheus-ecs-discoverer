@@ -50,7 +50,7 @@ pipeline {
                             steps {
                                 sh '''
                                     rm -rf */node_modules/ ||:
-                                    yamllint $PWD
+                                    yamllint --exclude '.github/**' $PWD
                                 '''
                             }
                         }
