@@ -129,10 +129,10 @@ pipeline {
                     steps {
                         sh '''
                         poetry run black \
-                        --verbose \
-                        --check \
-                        --target-version py39 \
-                        -- .
+                            --verbose \
+                            --check \
+                            --target-version py39 \
+                            .
                         '''
                     }
                 }
@@ -141,7 +141,7 @@ pipeline {
                     steps {
                         sh '''
                         poetry run flake8 \
-                        prometheus_ecs_discoverer tests
+                            prometheus_ecs_discoverer tests
                         '''
                     }
                 }
@@ -151,8 +151,7 @@ pipeline {
         stage('Build Docker Image') {
             when {
                 anyOf {
-                    branch 'master'
-                    branch 'PR-*'
+                    branch 'takkt-fix-for-3-3-3'
                 }
             }
             steps {
@@ -171,8 +170,7 @@ pipeline {
         stage('Push Docker Image') {
             when {
                 anyOf {
-                    branch 'master'
-                    branch 'PR-*'
+                    branch 'takkt-fix-for-3-3-3'
                 }
             }
             steps {
