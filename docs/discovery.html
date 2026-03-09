@@ -451,7 +451,7 @@ def _extract_custom_labels_from_dockerlabels(
 <dl>
 <dt id="prometheus_ecs_discoverer.discovery.PrometheusEcsDiscoverer"><code class="flex name class">
 <span>class <span class="ident">PrometheusEcsDiscoverer</span></span>
-<span>(</span><span>fetcher: Type[<a title="prometheus_ecs_discoverer.fetching.CachedFetcher" href="fetching.html#prometheus_ecs_discoverer.fetching.CachedFetcher">CachedFetcher</a>])</span>
+<span>(</span><span>fetcher: Type[<a title="prometheus_ecs_discoverer.fetching.CachedFetcher" href="fetching.html#prometheus_ecs_discoverer.fetching.CachedFetcher">CachedFetcher</a>])</span>
 </code></dt>
 <dd>
 <div class="desc"><p>The disoverer.</p>
@@ -709,7 +709,7 @@ meaning they could not have been turned into target objects.</p></div>
 <h3>Methods</h3>
 <dl>
 <dt id="prometheus_ecs_discoverer.discovery.PrometheusEcsDiscoverer.discover"><code class="name flex">
-<span>def <span class="ident">discover</span></span>(<span>self) ‑> List[Type[<a title="prometheus_ecs_discoverer.discovery.Target" href="#prometheus_ecs_discoverer.discovery.Target">Target</a>]]</span>
+<span>def <span class="ident">discover</span></span>(<span>self) ‑> List[Type[<a title="prometheus_ecs_discoverer.discovery.Target" href="#prometheus_ecs_discoverer.discovery.Target">Target</a>]]</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -748,7 +748,7 @@ meaning they could not have been turned into target objects.</p></div>
 </dd>
 <dt id="prometheus_ecs_discoverer.discovery.Target"><code class="flex name class">
 <span>class <span class="ident">Target</span></span>
-<span>(</span><span>ip: str, port: str, p_instance: str, task_name: str, metrics_path: str = None, cluster_name: str = None, task_version: int = None, task_id: str = None, container_id: str = None, instance_id: str = None, custom_labels: Dict[str, str] = None)</span>
+<span>(</span><span>ip: str, port: str, p_instance: str, task_name: str, metrics_path: str = None, cluster_name: str = None, task_version: int = None, task_id: str = None, container_id: str = None, instance_id: str = None, custom_labels: Dict[str, str] = None)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Data class with all information necessary to build a JSON target.</p></div>
@@ -774,47 +774,47 @@ class Target:
 </details>
 <h3>Class variables</h3>
 <dl>
-<dt id="prometheus_ecs_discoverer.discovery.Target.cluster_name"><code class="name">var <span class="ident">cluster_name</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.cluster_name"><code class="name">var <span class="ident">cluster_name</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.container_id"><code class="name">var <span class="ident">container_id</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.container_id"><code class="name">var <span class="ident">container_id</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.custom_labels"><code class="name">var <span class="ident">custom_labels</span> : Dict[str, str]</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.custom_labels"><code class="name">var <span class="ident">custom_labels</span> : Dict[str, str]</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.instance_id"><code class="name">var <span class="ident">instance_id</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.instance_id"><code class="name">var <span class="ident">instance_id</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.ip"><code class="name">var <span class="ident">ip</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.ip"><code class="name">var <span class="ident">ip</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.metrics_path"><code class="name">var <span class="ident">metrics_path</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.metrics_path"><code class="name">var <span class="ident">metrics_path</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.p_instance"><code class="name">var <span class="ident">p_instance</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.p_instance"><code class="name">var <span class="ident">p_instance</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.port"><code class="name">var <span class="ident">port</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.port"><code class="name">var <span class="ident">port</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.task_id"><code class="name">var <span class="ident">task_id</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.task_id"><code class="name">var <span class="ident">task_id</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.task_name"><code class="name">var <span class="ident">task_name</span> : str</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.task_name"><code class="name">var <span class="ident">task_name</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.Target.task_version"><code class="name">var <span class="ident">task_version</span> : int</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.Target.task_version"><code class="name">var <span class="ident">task_version</span> : int</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
@@ -822,7 +822,7 @@ class Target:
 </dd>
 <dt id="prometheus_ecs_discoverer.discovery.TaskInfo"><code class="flex name class">
 <span>class <span class="ident">TaskInfo</span></span>
-<span>(</span><span>task: dict, task_definition: dict, container_instance: dict = None, ec2_instance: dict = None)</span>
+<span>(</span><span>task: dict, task_definition: dict, container_instance: dict = None, ec2_instance: dict = None)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Data class that wraps a few objects only used in discovery module.</p></div>
@@ -841,19 +841,19 @@ class TaskInfo:
 </details>
 <h3>Class variables</h3>
 <dl>
-<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.container_instance"><code class="name">var <span class="ident">container_instance</span> : dict</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.container_instance"><code class="name">var <span class="ident">container_instance</span> : dict</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.ec2_instance"><code class="name">var <span class="ident">ec2_instance</span> : dict</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.ec2_instance"><code class="name">var <span class="ident">ec2_instance</span> : dict</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.task"><code class="name">var <span class="ident">task</span> : dict</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.task"><code class="name">var <span class="ident">task</span> : dict</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>
-<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.task_definition"><code class="name">var <span class="ident">task_definition</span> : dict</code></dt>
+<dt id="prometheus_ecs_discoverer.discovery.TaskInfo.task_definition"><code class="name">var <span class="ident">task_definition</span> : dict</code></dt>
 <dd>
 <div class="desc"></div>
 </dd>

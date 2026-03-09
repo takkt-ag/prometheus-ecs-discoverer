@@ -228,7 +228,7 @@ def write_targets_to_file(targets: List[Type[Target]], output_directory: str) -&
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="prometheus_ecs_discoverer.marshalling.extract_path_interval_pairs"><code class="name flex">
-<span>def <span class="ident">extract_path_interval_pairs</span></span>(<span>metrics_path: str = None) ‑> Dict[str, str]</span>
+<span>def <span class="ident">extract_path_interval_pairs</span></span>(<span>metrics_path: str = None) ‑> Dict[str, str]</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Extracts path intervals from given metrics path.</p>
@@ -280,7 +280,7 @@ def write_targets_to_file(targets: List[Type[Target]], output_directory: str) -&
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.marshalling.get_filename"><code class="name flex">
-<span>def <span class="ident">get_filename</span></span>(<span>interval: str = None, filename_15s: str = '15s-tasks.json', filename_30s: str = '30s-tasks.json', filename_1m: str = '1m-tasks.json', filename_5m: str = '5m-tasks.json', filename_generic: str = 'tasks.json') ‑> str</span>
+<span>def <span class="ident">get_filename</span></span>(<span>interval: str = None, filename_15s: str = '15s-tasks.json', filename_30s: str = '30s-tasks.json', filename_1m: str = '1m-tasks.json', filename_5m: str = '5m-tasks.json', filename_generic: str = 'tasks.json') ‑> str</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Gets the filename for given interval.</p>
@@ -323,7 +323,7 @@ def write_targets_to_file(targets: List[Type[Target]], output_directory: str) -&
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.marshalling.marshall_targets"><code class="name flex">
-<span>def <span class="ident">marshall_targets</span></span>(<span>targets: List[Type[<a title="prometheus_ecs_discoverer.discovery.Target" href="discovery.html#prometheus_ecs_discoverer.discovery.Target">Target</a>]], filename_15s: str = '15s-tasks.json', filename_30s: str = '30s-tasks.json', filename_1m: str = '1m-tasks.json', filename_5m: str = '5m-tasks.json', filename_generic: str = 'tasks.json', labelname_cluster: str = 'cluster', labelname_taskversion: str = 'task_version', labelname_taskid: str = 'task_id', labelname_containerid: str = 'container_id', labelname_instanceid: str = 'instance_id') ‑> Dict[str, List[Dict]]</span>
+<span>def <span class="ident">marshall_targets</span></span>(<span>targets: List[Type[<a title="prometheus_ecs_discoverer.discovery.Target" href="discovery.html#prometheus_ecs_discoverer.discovery.Target">Target</a>]], filename_15s: str = '15s-tasks.json', filename_30s: str = '30s-tasks.json', filename_1m: str = '1m-tasks.json', filename_5m: str = '5m-tasks.json', filename_generic: str = 'tasks.json', labelname_cluster: str = 'cluster', labelname_taskversion: str = 'task_version', labelname_taskid: str = 'task_id', labelname_containerid: str = 'container_id', labelname_instanceid: str = 'instance_id') ‑> Dict[str, List[Dict]]</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Marshalls given targets into JSON compatible structure.</p>
@@ -446,7 +446,7 @@ def write_targets_to_file(targets: List[Type[Target]], output_directory: str) -&
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.marshalling.write_targets_to_file"><code class="name flex">
-<span>def <span class="ident">write_targets_to_file</span></span>(<span>targets: List[Type[<a title="prometheus_ecs_discoverer.discovery.Target" href="discovery.html#prometheus_ecs_discoverer.discovery.Target">Target</a>]], output_directory: str) ‑> NoneType</span>
+<span>def <span class="ident">write_targets_to_file</span></span>(<span>targets: List[Type[<a title="prometheus_ecs_discoverer.discovery.Target" href="discovery.html#prometheus_ecs_discoverer.discovery.Target">Target</a>]], output_directory: str) ‑> NoneType</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Writes targets to files.</p>

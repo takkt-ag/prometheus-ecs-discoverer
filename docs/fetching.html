@@ -369,7 +369,7 @@ class CachedFetcher:
 <dl>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher"><code class="flex name class">
 <span>class <span class="ident">CachedFetcher</span></span>
-<span>(</span><span>ecs_client, ec2_client, throttle_interval_seconds: float = 0.1, should_throttle: bool = False)</span>
+<span>(</span><span>ecs_client, ec2_client, throttle_interval_seconds: float = 0.1, should_throttle: bool = False)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Works with the AWS API and leverages a sliding cache.</p>
@@ -688,7 +688,7 @@ made to the AWS API.</p></div>
 <h3>Methods</h3>
 <dl>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.flush_caches"><code class="name flex">
-<span>def <span class="ident">flush_caches</span></span>(<span>self) ‑> NoneType</span>
+<span>def <span class="ident">flush_caches</span></span>(<span>self) ‑> NoneType</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Flushes all caches. Should be called at the end of a round.</p></div>
@@ -706,7 +706,7 @@ made to the AWS API.</p></div>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_arns"><code class="name flex">
-<span>def <span class="ident">get_arns</span></span>(<span>self, method: str, key: str, **aws_api_parameters) ‑> list</span>
+<span>def <span class="ident">get_arns</span></span>(<span>self, method: str, key: str, **aws_api_parameters) ‑> list</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Gets the ARNs with a given method and key.</p>
@@ -760,7 +760,7 @@ made to the AWS API.</p></div>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_cluster_arns"><code class="name flex">
-<span>def <span class="ident">get_cluster_arns</span></span>(<span>self) ‑> list</span>
+<span>def <span class="ident">get_cluster_arns</span></span>(<span>self) ‑> list</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get cluster ARNs.</p></div>
@@ -777,7 +777,7 @@ made to the AWS API.</p></div>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_container_instance_arns"><code class="name flex">
-<span>def <span class="ident">get_container_instance_arns</span></span>(<span>self, cluster_arn: str) ‑> list</span>
+<span>def <span class="ident">get_container_instance_arns</span></span>(<span>self, cluster_arn: str) ‑> list</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get container instance ARNs for given cluster ARN.</p></div>
@@ -796,7 +796,7 @@ made to the AWS API.</p></div>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_container_instances"><code class="name flex">
-<span>def <span class="ident">get_container_instances</span></span>(<span>self, cluster_arn: str, arns: list = None) ‑> dict</span>
+<span>def <span class="ident">get_container_instances</span></span>(<span>self, cluster_arn: str, arns: list = None) ‑> dict</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get container instance descriptions from cache / AWS API.</p>
@@ -855,7 +855,7 @@ container instance descriptions.</dd>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_ec2_instances"><code class="name flex">
-<span>def <span class="ident">get_ec2_instances</span></span>(<span>self, instance_ids: list) ‑> dict</span>
+<span>def <span class="ident">get_ec2_instances</span></span>(<span>self, instance_ids: list) ‑> dict</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get EC2 instance descriptions from cache / AWS API.</p>
@@ -911,7 +911,7 @@ EC2 instance descriptions.</dd>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_task_arns"><code class="name flex">
-<span>def <span class="ident">get_task_arns</span></span>(<span>self, cluster_arn: str) ‑> list</span>
+<span>def <span class="ident">get_task_arns</span></span>(<span>self, cluster_arn: str) ‑> list</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get task ARNs for given cluster ARN.</p></div>
@@ -928,7 +928,7 @@ EC2 instance descriptions.</dd>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_task_definition"><code class="name flex">
-<span>def <span class="ident">get_task_definition</span></span>(<span>self, arn: str) ‑> dict</span>
+<span>def <span class="ident">get_task_definition</span></span>(<span>self, arn: str) ‑> dict</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get single task definition descriptions from cache / AWS API.</p>
@@ -975,7 +975,7 @@ description.</dd>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_task_definition_arns"><code class="name flex">
-<span>def <span class="ident">get_task_definition_arns</span></span>(<span>self) ‑> list</span>
+<span>def <span class="ident">get_task_definition_arns</span></span>(<span>self) ‑> list</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get task definition ARNs.</p></div>
@@ -990,7 +990,7 @@ description.</dd>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_task_definitions"><code class="name flex">
-<span>def <span class="ident">get_task_definitions</span></span>(<span>self, arns: list = None) ‑> dict</span>
+<span>def <span class="ident">get_task_definitions</span></span>(<span>self, arns: list = None) ‑> dict</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get task definition descriptions from cache / AWS API.</p>
@@ -1048,7 +1048,7 @@ definition descriptions.</dd>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.fetching.CachedFetcher.get_tasks"><code class="name flex">
-<span>def <span class="ident">get_tasks</span></span>(<span>self, cluster_arn: str, task_arns: list = None) ‑> dict</span>
+<span>def <span class="ident">get_tasks</span></span>(<span>self, cluster_arn: str, task_arns: list = None) ‑> dict</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get task descriptions from cache / AWS API.</p>

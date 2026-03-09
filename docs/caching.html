@@ -224,7 +224,7 @@ class SlidingCache:
 <dl>
 <dt id="prometheus_ecs_discoverer.caching.SlidingCache"><code class="flex name class">
 <span>class <span class="ident">SlidingCache</span></span>
-<span>(</span><span>name: str = 'generic')</span>
+<span>(</span><span>name: str = 'generic')</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Cache consisting out of two slots with a sliding window.</p>
@@ -458,7 +458,7 @@ more informative logging and metrics. Defaults to "generic".</p></div>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.caching.SlidingCache.get_multiple"><code class="name flex">
-<span>def <span class="ident">get_multiple</span></span>(<span>self, keys: List[str], fetch: Callable[[List[str]], List[str]]) ‑> dict</span>
+<span>def <span class="ident">get_multiple</span></span>(<span>self, keys: List[str], fetch: Callable[[List[str]], List[str]]) ‑> dict</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get entries from cache and update if missing.</p>
@@ -520,7 +520,7 @@ cache will never remove old data and eat up more and more memory.</p>
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.caching.SlidingCache.get_single"><code class="name flex">
-<span>def <span class="ident">get_single</span></span>(<span>self, key: str, fetch: Callable[[str], dict]) ‑> dict</span>
+<span>def <span class="ident">get_single</span></span>(<span>self, key: str, fetch: Callable[[str], dict]) ‑> dict</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Get entry from cache and update if missing.</p>

@@ -107,7 +107,7 @@ def info(labels: Dict[str, str], name: str = &#34;info&#34;) -&gt; None:
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="prometheus_ecs_discoverer.telemetry.counter"><code class="name flex">
-<span>def <span class="ident">counter</span></span>(<span>name: str, documentation: str, labels: tuple = ()) ‑> Type[prometheus_client.metrics.Counter]</span>
+<span>def <span class="ident">counter</span></span>(<span>name: str, documentation: str, labels: tuple = ()) ‑> Type[prometheus_client.metrics.Counter]</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Builds a counter with configured namespace / subsystem.</p></div>
@@ -128,7 +128,7 @@ def info(labels: Dict[str, str], name: str = &#34;info&#34;) -&gt; None:
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.telemetry.gauge"><code class="name flex">
-<span>def <span class="ident">gauge</span></span>(<span>name: str, documentation: str, labels: tuple = ()) ‑> Type[prometheus_client.metrics.Gauge]</span>
+<span>def <span class="ident">gauge</span></span>(<span>name: str, documentation: str, labels: tuple = ()) ‑> Type[prometheus_client.metrics.Gauge]</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Builds a gauge with configured namespace / subsystem.</p></div>
@@ -149,7 +149,7 @@ def info(labels: Dict[str, str], name: str = &#34;info&#34;) -&gt; None:
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.telemetry.histogram"><code class="name flex">
-<span>def <span class="ident">histogram</span></span>(<span>name: str, documentation: str, labels: tuple = (), buckets: tuple = (0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1.0, 2.5, 5.0, 7.5, 10.0, inf)) ‑> Type[prometheus_client.metrics.Histogram]</span>
+<span>def <span class="ident">histogram</span></span>(<span>name: str, documentation: str, labels: tuple = (), buckets: tuple = (0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1.0, 2.5, 5.0, 7.5, 10.0, inf)) ‑> Type[prometheus_client.metrics.Histogram]</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Builds a histogram with configured namespace / subsystem.</p></div>
@@ -176,7 +176,7 @@ def info(labels: Dict[str, str], name: str = &#34;info&#34;) -&gt; None:
 </details>
 </dd>
 <dt id="prometheus_ecs_discoverer.telemetry.info"><code class="name flex">
-<span>def <span class="ident">info</span></span>(<span>labels: Dict[str, str], name: str = 'info') ‑> NoneType</span>
+<span>def <span class="ident">info</span></span>(<span>labels: Dict[str, str], name: str = 'info') ‑> NoneType</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Creates a gauge with the given label value pairs.</p>
