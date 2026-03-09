@@ -188,7 +188,7 @@ pipeline {
                     }
 
                     // Push image into ECR (only on master)
-                    if ( env.BRANCH_NAME == 'master' ) {
+                    if ( env.BRANCH_NAME == 'takkt-fix-for-3-3-3' ) {
                         withCredentials([[
                             $class       : 'AmazonWebServicesCredentialsBinding',
                             credentialsId: 'aws_jenkins_packer',
