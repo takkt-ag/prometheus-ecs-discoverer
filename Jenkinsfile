@@ -110,6 +110,8 @@ pipeline {
             environment {
                 POETRY_VIRTUALENVS_IN_PROJECT = 'true'
                 POETRY_VIRTUALENVS_PATH = "${env.WORKSPACE}/.venv"
+                POETRY_CONFIG_DIR = "${env.WORKSPACE}/.poetry-config"
+                POETRY_CACHE_DIR = "${env.WORKSPACE}/.poetry-cache"
                 PIP_CONFIG_FILE = "${env.WORKSPACE}/pip.conf"
             }
 

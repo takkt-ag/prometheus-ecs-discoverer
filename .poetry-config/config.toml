@@ -1,0 +1,2 @@
+[repositories.nexus]
+url = "https://nexus.shared.ecom.kkeu.de/repository/pypi-proxy/simple/"
