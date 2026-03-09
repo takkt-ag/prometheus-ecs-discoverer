@@ -1,5 +1,5 @@
 [flake8]
-exclude = .git
+exclude = .git,.venv,__pycache__,.poetry-config,.poetry-cache
 ignore = E501,E203,W291,W293,F821,W503,E231
 max-complexity = 10
 max-line-length = 90

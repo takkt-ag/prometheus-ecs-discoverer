@@ -196,7 +196,9 @@ class PrometheusEcsDiscoverer:
                 break
 
         if container_definition is None:
-            _logger.warning(f"No container definition found for container {container_name}.")
+            _logger.warning(
+                f"No container definition found for container {container_name}."
+            )
             self.targets_marked_rejected_counter += 1
             return
 

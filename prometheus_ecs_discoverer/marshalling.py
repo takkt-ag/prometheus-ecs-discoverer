@@ -48,9 +48,13 @@ def extract_path_interval_pairs(
         else:
             path_interval[entry] = None
 
-    logger.bind(inp=metrics_path, outp=path_interval).debug(
-        "Extracted path interval pairs."
-    ) if s.DEBUG else None
+    (
+        logger.bind(inp=metrics_path, outp=path_interval).debug(
+            "Extracted path interval pairs."
+        )
+        if s.DEBUG
+        else None
+    )
 
     return path_interval
 

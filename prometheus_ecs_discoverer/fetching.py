@@ -145,9 +145,13 @@ class CachedFetcher:
         """
 
         def uncached_fetch(task_arns: list) -> dict:
-            logger.bind(cluster_arn=cluster_arn, task_arns=task_arns).debug(
-                "Fetch tasks from AWS with describe_tasks."
-            ) if s.DEBUG else None
+            (
+                logger.bind(cluster_arn=cluster_arn, task_arns=task_arns).debug(
+                    "Fetch tasks from AWS with describe_tasks."
+                )
+                if s.DEBUG
+                else None
+            )
 
             tasks = []
             chunked_task_arns = toolbox.chunk_list(task_arns, 100)
@@ -183,9 +187,13 @@ class CachedFetcher:
         """
 
         def uncached_fetch(arn: str) -> dict:
-            logger.bind(arn=arn).debug(
-                "Fetch task definition from AWS with describe_task_definition."
-            ) if s.DEBUG else None
+            (
+                logger.bind(arn=arn).debug(
+                    "Fetch task definition from AWS with describe_task_definition."
+                )
+                if s.DEBUG
+                else None
+            )
 
             start_time = default_timer()
             task_definition = self.ecs.describe_task_definition(taskDefinition=arn)[
@@ -216,9 +224,13 @@ class CachedFetcher:
         """
 
         def uncached_fetch(arns: list) -> dict:
-            logger.bind(arns=arns).debug(
-                "Fetch task definitions from AWS with describe_task_definition."
-            ) if s.DEBUG else None
+            (
+                logger.bind(arns=arns).debug(
+                    "Fetch task definitions from AWS with describe_task_definition."
+                )
+                if s.DEBUG
+                else None
+            )
 
             descriptions = {}
             for arn in arns:
@@ -255,9 +267,13 @@ class CachedFetcher:
         """
 
         def uncached_fetch(arns: list) -> dict:
-            logger.bind(arns=arns).debug(
-                "Fetch container instances from AWS with describe_container_instances."
-            ) if s.DEBUG else None
+            (
+                logger.bind(arns=arns).debug(
+                    "Fetch container instances from AWS with describe_container_instances."
+                )
+                if s.DEBUG
+                else None
+            )
 
             lst = []
             arns_chunks = toolbox.chunk_list(arns, 100)
@@ -298,9 +314,13 @@ class CachedFetcher:
         """
 
         def uncached_fetch(instance_ids: list) -> dict:
-            logger.bind(instance_ids=instance_ids).debug(
-                "Fetch EC2 instances from AWS with describe_instances."
-            ) if s.DEBUG else None
+            (
+                logger.bind(instance_ids=instance_ids).debug(
+                    "Fetch EC2 instances from AWS with describe_instances."
+                )
+                if s.DEBUG
+                else None
+            )
 
             instances_list = []
             ids_chunks = toolbox.chunk_list(instance_ids, 100)
