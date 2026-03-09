@@ -30,8 +30,8 @@ priority = "primary"
 [tool.poetry.group.dev.dependencies]
 poetry = "^2.3.2"
 pytest = "^6.1"
-flake8 = "^3.8"
-black = "^20.8b1"
+flake8 = "^7.0"
+black = "^24.0"
 requests = "^2.24"
 pytest-cov = "^2.10"
 moto = {extras = ["ec2", "ecs"], version = "^4.0"}
