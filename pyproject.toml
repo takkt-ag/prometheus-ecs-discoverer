@@ -6,7 +6,10 @@ build-backend = "poetry.masonry.api"
 name = "prometheus-ecs-discoverer"
 version = "3.3.3"
 description = "Prometheus Service Discovery for AWS ECS"
-authors = ["Tim Schwenke <tim.and.trallnag+code@gmail.com>"]
+authors = [
+    "Tim Schwenke <tim.and.trallnag+code@gmail.com>",
+    "Phillip Stockmann <phillip.stockmann@takkt.com>",
+]
 license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/trallnag/prometheus-ecs-discoverer"
@@ -34,7 +37,7 @@ flake8 = "^7.0"
 black = "^24.0"
 requests = "^2.24"
 pytest-cov = "^2.10"
-moto = {extras = ["ec2", "ecs"], version = "^4.0"}
+moto = { extras = ["ec2", "ecs"], version = "^4.0" }
 rope = "^0.17"
 isort = "^5.6"
 pdoc3 = "^0.9.1"
