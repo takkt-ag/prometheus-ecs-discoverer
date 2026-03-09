@@ -9,6 +9,21 @@
 
 def docker_version_linter = '2.867.0' // docker.shared.ecom.kkeu.de/ecom-tools-linter
 
+CONFIGURATION = [
+    'Feat1': [
+        credentialsId: 'aws_jenkins_ecomtest-cfnmanager',
+    ],
+    'Integration': [
+        credentialsId: 'aws_jenkins_ecomtest-cfnmanager',
+    ],
+    'Preprod': [
+        credentialsId: 'aws_jenkins_ecompreprod-cfnmanager',
+    ],
+    'EcomProd': [
+        credentialsId: 'aws_jenkins_ecomprod-cfnmanager',
+    ],
+]
+
 /* End of renovate version variables */
 
 pipeline {
@@ -208,6 +223,44 @@ pipeline {
                 }
             }
         }
+
+        stage('Redeploy Prometheus ECS') {
+            when {
+                anyOf {
+                    branch 'takkt-fix-for-3-3-3'
+                }
+            }
+            parallel {
+                stage('Feat1') {
+                    steps {
+                        script {
+                            deployPrometheusEcs('Feat1')
+                        }
+                    }
+                }
+                stage('Integration') {
+                    steps {
+                        script {
+                            deployPrometheusEcs('Integration')
+                        }
+                    }
+                }
+                stage('Preprod') {
+                    steps {
+                        script {
+                            deployPrometheusEcs('Preprod')
+                        }
+                    }
+                }
+                stage('EcomProd') {
+                    steps {
+                        script {
+                            deployPrometheusEcs('EcomProd')
+                        }
+                    }
+                }
+            }
+        }
     }
 
     post {
@@ -222,4 +275,13 @@ pipeline {
             sendBuildStatus()
         }
     }
+}
+
+def deployPrometheusEcs(environmentKey) {
+    ecsForceNewDeployment(
+        environment: environmentKey,
+        clusterName: 'ECSFargateCluster',
+        deploymentCredentialsId: CONFIGURATION[environmentKey].credentialsId,
+        serviceFilter: { serviceArn -> serviceArn =~ /MonitoringSlave-[^-]+-MonitoringECSPrometheus-/ },
+    )
 }
