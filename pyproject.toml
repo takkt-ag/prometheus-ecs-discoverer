@@ -38,7 +38,7 @@ black = "^24.0"
 requests = "^2.24"
 pytest-cov = "^2.10"
 moto = { extras = ["ec2", "ecs"], version = "^4.0" }
-rope = "^0.17"
+rope = "^1.0.0"
 isort = "^5.6"
 pdoc3 = "^0.9.1"
 
