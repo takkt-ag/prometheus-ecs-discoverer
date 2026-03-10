@@ -36,7 +36,7 @@ def configure_logging() -> None:
     else:
         # <green>{time:HH:mm:ss}</green> <level>{level}</level> <cyan>{name}:{function}:{line}</cyan> {message} <dim>{extra}</dim>
         fmt = "<green>{time:HH:mm:ss}</green> <level>{level}</level> <cyan>{function}</cyan> {message} <dim>{extra}</dim>"
-        logger.add(sys.stderr, colorize=True, format=fmt, level=s.LOG_LEVEL)
+        logger.add(sys.stderr, colorize=False, format=fmt, level=s.LOG_LEVEL)
 
     if s.BOTO3_DEBUG:
         import boto3
