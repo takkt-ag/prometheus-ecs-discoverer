@@ -1,4 +1,4 @@
-FROM bitnami/python:3.11
+FROM bitnami/python:latest
 
 LABEL MAINTAINER="tim.and.trallnag+code@gmail.com"
 
