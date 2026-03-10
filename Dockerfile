@@ -1,4 +1,4 @@
-FROM bitnami/python:latest
+FROM bitnami/python:3.11
 
 LABEL MAINTAINER="tim.and.trallnag+code@gmail.com"
 
@@ -18,6 +18,6 @@ RUN python -m pip install poetry;\
 
 ENV AWS_DEFAULT_REGION=eu-central-1
 ENV PROMED_LOG_LEVEL=INFO
-ENV SETTINGS_FILE_FOR_DYNACONF="/app/settings.toml"
+ENV SETTINGS_FILE_FOR_DYNACONF="/app/prometheus_ecs_discoverer/settings.toml"
 
 CMD [ "poetry", "run", "python", "-m", "prometheus_ecs_discoverer.run" ]
