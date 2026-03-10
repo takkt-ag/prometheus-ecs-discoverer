@@ -22,7 +22,7 @@ prometheus-client = "^0.24.0"
 loguru = "^0.7.0"
 prettyprinter = "^0.18.0"
 dynaconf = "^3.1.2"
-setuptools = "^78.0.0"
+setuptools = "^82.0.0"
 
 [[tool.poetry.source]]
 name = "nexus"
