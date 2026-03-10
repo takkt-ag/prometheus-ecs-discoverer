@@ -18,7 +18,7 @@ keywords = ["prometheus", "discovery", "aws", "ecs", "metrics"]
 [tool.poetry.dependencies]
 python = "^3.14"
 boto3 = "^1.16.0"
-prometheus-client = "^0.8.0"
+prometheus-client = "^0.24.0"
 loguru = "^0.7.0"
 prettyprinter = "^0.18.0"
 dynaconf = "^3.1.2"

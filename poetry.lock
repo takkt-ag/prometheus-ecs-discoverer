@@ -1861,17 +1861,19 @@ reference = "nexus"
 
 [[package]]
 name = "prometheus-client"
-version = "0.8.0"
+version = "0.24.1"
 description = "Python client for the Prometheus monitoring system."
 optional = false
-python-versions = "*"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "prometheus_client-0.8.0-py2.py3-none-any.whl", hash = "sha256:983c7ac4b47478720db338f1491ef67a100b474e3bc7dafcbaefb7d0b8f9b01c"},
-    {file = "prometheus_client-0.8.0.tar.gz", hash = "sha256:c6e6b706833a6bd1fd51711299edee907857be10ece535126a158f911ee80915"},
+    {file = "prometheus_client-0.24.1-py3-none-any.whl", hash = "sha256:150db128af71a5c2482b36e588fc8a6b95e498750da4b17065947c16070f4055"},
+    {file = "prometheus_client-0.24.1.tar.gz", hash = "sha256:7e0ced7fbbd40f7b84962d5d2ab6f17ef88a72504dcf7c0b40737b43b2a461f9"},
 ]
 
 [package.extras]
+aiohttp = ["aiohttp"]
+django = ["django"]
 twisted = ["twisted"]
 
 [package.source]
@@ -2865,4 +2867,4 @@ reference = "nexus"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.14"
-content-hash = "a0a8f3a5a58e4bc105eed1b3a68002ed9a383b9fccff2b6198a649c70a350ddf"
+content-hash = "4f68e7d1639d283c82dcf8e636e359ad4996ab50b0a5b7397f5eccd54472d622"
