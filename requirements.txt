@@ -4,7 +4,7 @@ colorama==0.4.4; python_version >= "3.5" and python_full_version < "3.0.0" and s
 colorful==0.5.4
 dynaconf==3.1.4
 jmespath==0.10.0; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.6.0"
-loguru==0.5.3; python_version >= "3.5"
+loguru==0.7.3; python_version >= "3.5"
 prettyprinter==0.18.0
 prometheus-client==0.8.0
 pygments==2.15.1; python_version >= "3.5"
