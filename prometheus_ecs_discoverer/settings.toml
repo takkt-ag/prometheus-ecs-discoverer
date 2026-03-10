@@ -2,15 +2,15 @@
 
 # ==============================================================================
 
-# The exact interval in seconds for the discoverer. The actual interval will 
+# The exact interval in seconds for the discoverer. The actual interval will
 # always be greater or equal (if the process takes longer than the interval).
-INTERVAL = 15
+INTERVAL = 60
 
 # This dir fill contain all target files for Prometheus.
-OUTPUT_DIRECTORY = "/tmp"
+OUTPUT_DIRECTORY = "/tmp/ecs_file_sd/"
 
 
-# Decides where PromED looks for <MARKER> that determines if the container is 
+# Decides where PromED looks for <MARKER> that determines if the container is
 # a target for Prometheus. Current options are:
 #     - 'dockerLabels' only checks docker labels added with the task definition.
 #     - 'environment' only the env vars added with the task definition.
@@ -21,7 +21,7 @@ MARKER = "PROMETHEUS_TARGET"
 # ==============================================================================
 # Logging
 LOG_LEVEL = "INFO"
-LOG_JSON = false
+LOG_JSON = true
 PRINT_STRUCTS = false
 BOTO3_DEBUG = false
 
@@ -45,7 +45,7 @@ LABELNAME_INSTANCEID = "instance_id"
 # ==============================================================================
 # Instrumentation
 
-PROMETHEUS_NAMESPACE = "discoverer_"
+PROMETHEUS_NAMESPACE = "ecs_"
 PROMETHEUS_SUBSYSTEM = ""
 PROMETHEUS_START_HTTP_SERVER = true
 PROMETHEUS_SERVER_PORT = 8080
@@ -55,22 +55,22 @@ PROMETHEUS_SERVER_PORT = 8080
 
 # Should the first run be throttled ensuring that the limits are not hit?
 WARMUP_THROTTLE = true
-THROTTLE_INTERVAL_SECONDS = 0.1
+THROTTLE_INTERVAL_SECONDS = 1.0
 
-# How often should a request be retried if it failed due to hitting limits? 
+# How often should a request be retried if it failed due to hitting limits?
 # Backoff time increases with every attempt.
 MAX_RETRY_ATTEMPTS = 8
 
 # Environment variables with this prefix are added as custom labels to targets.
 CUSTOM_LABEL_PREFIX = "PROMETHEUS_LABEL_"
 
-# Key in `dockerLabels` PromED will retrieve and extract custom labels to add 
+# Key in `dockerLabels` PromED will retrieve and extract custom labels to add
 # to all metrics. Format must follow this scheme: "name=value,name1=value".
 CUSTOM_LABELS_KEY = "promed.custom_labels"
 
-# A list of docker labels (only the ones defined in the definition) that should 
+# A list of docker labels (only the ones defined in the definition) that should
 # be mapped 1:1 to target labels. Dots / Dashes are replaced with underscores.
-WITH_DOCKER_LABELS = []
+WITH_DOCKER_LABELS = ["Environment","ApplicationName","ApplicationRole"]
 
 # If no endpoint is given in the respective env var, this will be used.
 FALLBACK_METRICS_ENDPOINT = "/metrics"
