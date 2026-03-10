@@ -16,4 +16,8 @@ ENV POETRY_CACHE_DIR=/app/.poetry-cache
 RUN python -m pip install poetry;\
     poetry install --only=main
 
+ENV AWS_DEFAULT_REGION=eu-central-1
+ENV PROMED_LOG_LEVEL=INFO
+ENV SETTINGS_FILE_FOR_DYNACONF="/app/settings.toml"
+
 CMD [ "poetry", "run", "python", "-m", "prometheus_ecs_discoverer.run" ]
